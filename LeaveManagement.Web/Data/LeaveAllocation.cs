@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using LeaveManagement.Web.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LeaveManagement.Web.Data
 {
     public class LeaveAllocation : BaseEntity
     {
-        
         public int NumberOfDays { get; set; }
 
         [ForeignKey("LeaveTypeId")]
@@ -13,6 +13,5 @@ namespace LeaveManagement.Web.Data
 
         public string EmployeeId { get; set; }
 
-        
     }
 }
