@@ -14,5 +14,9 @@ namespace LeaveManagement.Web.Data
         public DbSet<LeaveType> LeaveTypes { get; set; }
         public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
 
+        internal object Entity<T>(T entity) where T : class
+        {
+            throw new NotImplementedException();
+        }
     }
 }
