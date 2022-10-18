@@ -5,6 +5,8 @@ namespace LeaveManagement.Web.Data
 {
     public class LeaveAllocation : BaseEntity
     {
+        internal EmployeeListVM Employee;
+
         public int NumberOfDays { get; set; }
 
         [ForeignKey("LeaveTypeId")]
