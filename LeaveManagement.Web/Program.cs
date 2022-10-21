@@ -20,10 +20,16 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddTransient<IEmailSender>(s => new EmailSender("localhost", 25, "no-reply@leavemanagement.com"));
+
 builder.Services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 builder.Services.AddScoped<ILeaveTypeRepo, LeaveTypeRepo>();
 builder.Services.AddScoped<ILeaveAllocationRepo, LeaveAllocationRepo>();
+builder.Services.AddScoped<ILeaveRequestRepo, LeaveRequestRepo>();
+
+
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 
