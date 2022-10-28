@@ -11,6 +11,7 @@ using LeaveManagement.Web.Models;
 using LeaveManagement.Web.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using LeaveManagement.Web.Constants;
+using LeaveManagement.Application.Contracts;
 
 namespace LeaveManagement.Web.Controllers
 {
